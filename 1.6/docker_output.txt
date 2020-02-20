@@ -1,0 +1,16 @@
+(base) walder@station:~/workspaces/devops_docker/1.6$ sudo docker build -t docker-clock .
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM devopsdockeruh/overwrite_cmd_exercise
+ ---> 0f7f459b76c9
+Step 2/2 : CMD ["-c 0"]
+ ---> Using cache
+ ---> 90292860d52f
+Successfully built 90292860d52f
+Successfully tagged docker-clock:latest
+(base) walder@station:~/workspaces/devops_docker/1.6$ sudo docker run docker-clock
+1
+2
+3
+4
+5
+....

@@ -1,0 +1,56 @@
+(base) walder@station:~/workspaces/devops_docker/1.5$ sudo docker run -it devopsdockeruh/exec_bash_exercise sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+
+I used the '-it' flags to interact with the container. Curl worked automatically.
+
+Other solution:
+
+base) walder@station:~/workspaces/devops_docker/1.5$ sudo docker run -d -it --name containername1 devopsdockeruh/exec_bash_exercise sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+1473182e3c257cfdf589693f60ab8c3892f746d0d7a0a46d54a92b0eed57e35c
+(base) walder@station:~/workspaces/devops_docker/1.5$ sudo docker attach containername1
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+(base) walder@station:~/workspaces/devops_docker/1.5$ 
+
+'-d' to detach. After that I attached again, and typed in "helsinki.fi". Problem is you miss the beginning of the request. 
+
+
+Another solution:
+
+
+(base) walder@station:~/workspaces/devops_docker/1.5$ sudo docker run -d --name containername2 devopsdockeruh/exec_bash_exercise
+153a05e8af0c1186d2788629df0a69b585ad881f2339414e6583e825f780fe73
+(base) walder@station:~/workspaces/devops_docker/1.5$ sudo docker exec -it containername2 bash
+root@153a05e8af0c:/usr/app# sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+root@153a05e8af0c:/usr/app# 
+ 
+
+I started the container, entered it and then executed the script separately. 
+
+

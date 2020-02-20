@@ -1,0 +1,6 @@
+(base) walder@station:~/workspaces$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+(base) walder@station:~/workspaces$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+(base) walder@station:~/workspaces$ 
+

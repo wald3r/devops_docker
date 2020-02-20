@@ -1,0 +1,53 @@
+(base) walder@station:~/workspaces/devops_docker/1.11$ docker run -it -v $(pwd)/logs.txt:/app/logs.txt -p 8000:8000 backend
+
+> backend-example-docker@1.0.0 start /app
+> cross-env NODE_ENV=production node index.js
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Started on port 8000
+^C(base) walder@station:~/workspaces/devops_docker/1.11$ docker run -it -v $(pwd)/logs.txt:/app/logs.txt -p 8000:8000 backend
+
+> backend-example-docker@1.0.0 start /app
+> cross-env NODE_ENV=production node index.js
+
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+Started on port 8000
+
+
+
+
+
+
+(base) walder@station:~/workspaces/devops_docker/1.11$ cat logs.txt
+
+7/24/2019, 12:32:22 PM: Connection received in root
+7/24/2019, 12:39:57 PM: Connection received in root
+7/24/2019, 12:39:58 PM: Connection received in root
+7/24/2019, 12:40:00 PM: Connection received in root
+7/24/2019, 12:40:02 PM: Connection received in root
+7/24/2019, 12:40:02 PM: Connection received in root
+7/24/2019, 12:40:03 PM: Connection received in root
+7/24/2019, 12:40:03 PM: Connection received in root
+7/24/2019, 12:40:04 PM: Connection received in root
+7/24/2019, 12:40:04 PM: Connection received in root
+(base) walder@station:~/workspaces/devops_docker/1.11$ cat logs.txt
+
+7/24/2019, 12:32:22 PM: Connection received in root
+7/24/2019, 12:39:57 PM: Connection received in root
+7/24/2019, 12:39:58 PM: Connection received in root
+7/24/2019, 12:40:00 PM: Connection received in root
+7/24/2019, 12:40:02 PM: Connection received in root
+7/24/2019, 12:40:02 PM: Connection received in root
+7/24/2019, 12:40:03 PM: Connection received in root
+7/24/2019, 12:40:03 PM: Connection received in root
+7/24/2019, 12:40:04 PM: Connection received in root
+7/24/2019, 12:40:04 PM: Connection received in root
+7/24/2019, 12:40:41 PM: Connection received in root
+7/24/2019, 12:40:41 PM: Connection received in root
+7/24/2019, 12:40:42 PM: Connection received in root
+7/24/2019, 12:40:42 PM: Connection received in root
+7/24/2019, 12:40:42 PM: Connection received in root
+7/24/2019, 12:40:43 PM: Connection received in root
+7/24/2019, 12:40:43 PM: Connection received in root
+7/24/2019, 12:40:43 PM: Connection received in root
+

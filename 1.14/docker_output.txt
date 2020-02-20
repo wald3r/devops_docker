@@ -1,0 +1,165 @@
+(base) walder@station:~/workspaces/devops_docker/1.14$ docker run -it -p 3000:3000 rails
+=> Booting Puma
+=> Rails 5.2.2.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.6.0-p0), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 172.17.0.1 at 2019-07-24 16:36:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+   (0.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  ↳ /usr/local/bundle/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PressesController#new as HTML
+   (0.1ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/controllers/presses_controller.rb:18
+  Rendering presses/new.html.erb within layouts/application
+  Rendered presses/_form.html.erb (2.0ms)
+  Rendered presses/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 582ms (Views: 566.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/presses" for 172.17.0.1 at 2019-07-24 16:36:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iOxtro3Y/DN7OTNmHfoDHnOhR9K5Vx6s1R7hRjrhdyF0MSu9AtsLoEsUtH05X68KX16+nqGM/UB0Yszh85KfLA==", "commit"=>"Press"}
+   (0.1ms)  begin transaction
+  ↳ app/controllers/presses_controller.rb:31
+  Press Create (0.3ms)  INSERT INTO "presses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2019-07-24 16:36:34.321964"], ["updated_at", "2019-07-24 16:36:34.321964"]]
+  ↳ app/controllers/presses_controller.rb:31
+   (18.9ms)  commit transaction
+  ↳ app/controllers/presses_controller.rb:31
+Redirected to http://localhost:3000/presses/new
+Completed 302 Found in 24ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/presses/new" for 172.17.0.1 at 2019-07-24 16:36:34 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#new as HTML
+   (0.2ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/controllers/presses_controller.rb:18
+  Rendering presses/new.html.erb within layouts/application
+  Rendered presses/_form.html.erb (1.1ms)
+  Rendered presses/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/presses" for 172.17.0.1 at 2019-07-24 16:36:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YIxCwhfHSNb3xQ3JesZfEUbx8MX7r5ta8ozQomZhLDmcUQTRmMS/RcfoitJeY/MFag4JieN0eLZT8P0FrxLENA==", "commit"=>"Press"}
+   (0.3ms)  begin transaction
+  ↳ app/controllers/presses_controller.rb:31
+  Press Create (0.5ms)  INSERT INTO "presses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2019-07-24 16:36:36.188429"], ["updated_at", "2019-07-24 16:36:36.188429"]]
+  ↳ app/controllers/presses_controller.rb:31
+   (14.0ms)  commit transaction
+  ↳ app/controllers/presses_controller.rb:31
+Redirected to http://localhost:3000/presses/new
+Completed 302 Found in 23ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/presses/new" for 172.17.0.1 at 2019-07-24 16:36:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#new as HTML
+   (0.2ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/controllers/presses_controller.rb:18
+  Rendering presses/new.html.erb within layouts/application
+  Rendered presses/_form.html.erb (1.2ms)
+  Rendered presses/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/presses" for 172.17.0.1 at 2019-07-24 16:36:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KodN4iA6fXfL14uxSRKFpk5u3JZY6wRXdnzBxOOxAtHWWgvxrzmK5Pv6DKpttymyYpEl2kAw57vXAOxjKsLq3A==", "commit"=>"Press"}
+   (0.2ms)  begin transaction
+  ↳ app/controllers/presses_controller.rb:31
+  Press Create (0.9ms)  INSERT INTO "presses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2019-07-24 16:36:36.797309"], ["updated_at", "2019-07-24 16:36:36.797309"]]
+  ↳ app/controllers/presses_controller.rb:31
+   (14.5ms)  commit transaction
+  ↳ app/controllers/presses_controller.rb:31
+Redirected to http://localhost:3000/presses/new
+Completed 302 Found in 27ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/presses/new" for 172.17.0.1 at 2019-07-24 16:36:36 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#new as HTML
+   (0.2ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/controllers/presses_controller.rb:18
+  Rendering presses/new.html.erb within layouts/application
+  Rendered presses/_form.html.erb (1.2ms)
+  Rendered presses/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/presses" for 172.17.0.1 at 2019-07-24 16:36:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dnHYhA5gU7eXtAZc+unpTISN9nqlES+/0QvzK1eO1nSKrJ6XgWOkJKeZgUfeTEVYqHIPNr3KzFNwd96Mnv0+eQ==", "commit"=>"Press"}
+   (0.1ms)  begin transaction
+  ↳ app/controllers/presses_controller.rb:31
+  Press Create (0.3ms)  INSERT INTO "presses" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2019-07-24 16:36:37.332958"], ["updated_at", "2019-07-24 16:36:37.332958"]]
+  ↳ app/controllers/presses_controller.rb:31
+   (14.0ms)  commit transaction
+  ↳ app/controllers/presses_controller.rb:31
+Redirected to http://localhost:3000/presses/new
+Completed 302 Found in 18ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/presses/new" for 172.17.0.1 at 2019-07-24 16:36:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#new as HTML
+   (0.3ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/controllers/presses_controller.rb:18
+  Rendering presses/new.html.erb within layouts/application
+  Rendered presses/_form.html.erb (1.6ms)
+  Rendered presses/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/presses" for 172.17.0.1 at 2019-07-24 16:36:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#index as HTML
+  Rendering presses/index.html.erb within layouts/application
+   (0.2ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/views/presses/index.html.erb:3
+  Press Load (0.2ms)  SELECT "presses".* FROM "presses"
+  ↳ app/views/presses/index.html.erb:13
+  Rendered presses/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/presses/4" for 172.17.0.1 at 2019-07-24 16:36:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/BiF9XFZRiWafqd6V63i/TZTjJJMMs1uN3igfY+WxQ8AxcPm/lqxtqpTIGFzCE7pGqx13lTpLoKWBI3aRuUtAg==", "id"=>"4"}
+  Press Load (0.2ms)  SELECT  "presses".* FROM "presses" WHERE "presses"."id" = ? LIMIT ?  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/presses_controller.rb:68
+   (0.1ms)  begin transaction
+  ↳ app/controllers/presses_controller.rb:58
+  Press Destroy (0.2ms)  DELETE FROM "presses" WHERE "presses"."id" = ?  [["id", 4]]
+  ↳ app/controllers/presses_controller.rb:58
+   (14.0ms)  commit transaction
+  ↳ app/controllers/presses_controller.rb:58
+Redirected to http://localhost:3000/presses
+Completed 302 Found in 20ms (ActiveRecord: 14.5ms)
+
+
+Started GET "/presses" for 172.17.0.1 at 2019-07-24 16:36:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PressesController#index as HTML
+  Rendering presses/index.html.erb within layouts/application
+   (0.2ms)  SELECT COUNT(*) FROM "presses"
+  ↳ app/views/presses/index.html.erb:3
+  Press Load (0.2ms)  SELECT "presses".* FROM "presses"
+  ↳ app/views/presses/index.html.erb:13
+  Rendered presses/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+
+

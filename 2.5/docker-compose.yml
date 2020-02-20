@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+      redis:
+       image: redis:5.0.5
+       build: .
+       networks:
+         - webnet
+      backend:
+       build: ./backend
+       networks:
+         - webnet
+       environment:
+         - REDIS=redis
+         - REDIS_PORT=6379
+       ports:
+         - 8000:8000
+
+      frontend:
+       
+       build: ./frontend
+       networks:
+         - webnet
+       ports:
+         - 5000:5000
+
+networks:
+ webnet:

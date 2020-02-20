@@ -1,0 +1,27 @@
+(base) walder@station:~/workspaces/devops_docker/1.4$ sudo docker run -d --name exercise devopsdockeruh/exec_bash_exercise
+fbf2018d48df8bf12bc125a1ae7b5537ba474d66f6f9c82af64d35a6a44a8f90
+(base) walder@station:~/workspaces/devops_docker/1.4$ sudo docker exec -it exercise bash
+root@fbf2018d48df:/usr/app# tail -f ./logs.txt
+Tue, 23 Jul 2019 19:54:28 GMT
+Tue, 23 Jul 2019 19:54:31 GMT
+Tue, 23 Jul 2019 19:54:34 GMT
+Tue, 23 Jul 2019 19:54:37 GMT
+Secret message is:
+"Docker is easy"
+Tue, 23 Jul 2019 19:54:43 GMT
+Tue, 23 Jul 2019 19:54:46 GMT
+Tue, 23 Jul 2019 19:54:49 GMT
+Tue, 23 Jul 2019 19:54:52 GMT
+Secret message is:
+"Docker is easy"
+Tue, 23 Jul 2019 19:54:58 GMT
+Tue, 23 Jul 2019 19:55:01 GMT
+Tue, 23 Jul 2019 19:55:04 GMT
+Tue, 23 Jul 2019 19:55:07 GMT
+Secret message is:
+"Docker is easy"
+Tue, 23 Jul 2019 19:55:13 GMT
+Tue, 23 Jul 2019 19:55:16 GMT
+^C
+root@fbf2018d48df:/usr/app# exit
+

@@ -1,0 +1,23 @@
+(base) walder@station:~/workspaces/devops_docker/1.8$ sudo docker run -it -v $(pwd):/mydir devopsdockeruh/first_volume_exercise sh -c "while true; do sleep 1; cp /usr/app/logs.txt /mydir/; cat logs.txt; done"
+Mon, 18 Feb 2019 15:13:31 GMT
+Mon, 18 Feb 2019 15:13:34 GMT
+Mon, 18 Feb 2019 15:13:37 GMT
+Mon, 18 Feb 2019 15:13:40 GMT
+Secret message is:
+"Volume bind mount is easy"
+Mon, 18 Feb 2019 15:13:46 GMT
+Mon, 18 Feb 2019 15:13:31 GMT
+Mon, 18 Feb 2019 15:13:34 GMT
+Mon, 18 Feb 2019 15:13:37 GMT
+Mon, 18 Feb 2019 15:13:40 GMT
+Secret message is:
+"Volume bind mount is easy"
+Mon, 18 Feb 2019 15:13:46 GMT
+Mon, 18 Feb 2019 15:13:31 GMT
+Mon, 18 Feb 2019 15:13:34 GMT
+Mon, 18 Feb 2019 15:13:37 GMT
+Mon, 18 Feb 2019 15:13:40 GMT
+Secret message is:
+"Volume bind mount is easy"
+Mon, 18 Feb 2019 15:13:46 GMT
+

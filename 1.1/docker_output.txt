@@ -1,0 +1,28 @@
+(base) walder@station:~/workspaces$ sudo docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+0a4690c5d889: Pull complete 
+9719afee3eb7: Pull complete 
+44446b456159: Pull complete 
+Digest: sha256:b4b9b3eee194703fc2fa8afa5b7510c77ae70cfba567af1376a573a967c03dbb
+Status: Downloaded newer image for nginx:latest
+0a8aa030bc6588d9d6a09a62cbef2f03c82a7b076ccf6749a004b90733b93336
+(base) walder@station:~/workspaces$ sudo docker run -d nginx
+743b99625cf803fa5f27877abcaf983069606c1658c222c65e1ff50bc2f518f8
+(base) walder@station:~/workspaces$ sudo docker run -d nginx
+3bde2e0006385fa9508e9fb32e2704aa8db072e27e879687b7866722b5335cb2
+(base) walder@station:~/workspaces$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+3bde2e000638        nginx               "nginx -g 'daemon of…"   5 seconds ago       Up 4 seconds        80/tcp              flamboyant_davinci
+743b99625cf8        nginx               "nginx -g 'daemon of…"   9 seconds ago       Up 7 seconds        80/tcp              inspiring_wozniak
+0a8aa030bc65        nginx               "nginx -g 'daemon of…"   15 seconds ago      Up 14 seconds       80/tcp              sleepy_morse
+(base) walder@station:~/workspaces$ sudo docker stop 3b 74
+3b
+74
+(base) walder@station:~/workspaces$ sudo docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                     PORTS               NAMES
+3bde2e000638        nginx               "nginx -g 'daemon of…"   28 seconds ago      Exited (0) 2 seconds ago                       flamboyant_davinci
+743b99625cf8        nginx               "nginx -g 'daemon of…"   32 seconds ago      Exited (0) 2 seconds ago                       inspiring_wozniak
+0a8aa030bc65        nginx               "nginx -g 'daemon of…"   38 seconds ago      Up 36 seconds              80/tcp              sleepy_morse
+(base) walder@station:~/workspaces$ 
+

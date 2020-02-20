@@ -1,0 +1,39 @@
+version: '3.5'
+
+services:
+      redis:
+        image: redis
+        networks:
+          - webnet
+
+      postgres:
+       image: postgres
+       restart: unless-stopped
+       environment:
+            - POSTGRES_USER=test
+            - POSTGRES_PASSWORD=example
+       networks:
+         - webnet
+
+      backend:
+       build: ./backend
+       networks:
+         - webnet
+       environment:
+         - DB_USERNAME=test
+         - DB_PASSWORD=example
+         - REDIS=redis
+         - DB_HOST=postgres
+       ports:
+         - 8000:8000
+
+      frontend:
+       
+       build: ./frontend
+       networks:
+         - webnet
+       ports:
+         - 5000:5000
+
+networks:
+ webnet:

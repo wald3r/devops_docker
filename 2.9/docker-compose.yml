@@ -24,6 +24,9 @@ services:
             - POSTGRES_PASSWORD=example
        networks:
          - webnet
+       volumes:
+         - ./database:/var/lib/postgresql/data
+      
 
       backend:
        build: ./backend
@@ -47,3 +50,7 @@ services:
 
 networks:
  webnet:
+
+
+volumes:
+ database:

@@ -1,18 +1,15 @@
-FROM alpine:3.8
+FROM alpine:3.8 as dist
 
-COPY spring-example-project /app
-
-RUN apk add --no-cache openjdk8 && \
-    adduser -D spring && \
-    chown -R spring:spring /app
-
-USER spring
+COPY frontend-example-docker /app
 WORKDIR /app
 
-EXPOSE 8080
+RUN apk add --no-cache --update nodejs npm && \
+    npm install && \
+    npm build
 
-RUN ./mvnw package
-ENTRYPOINT java -jar ./target/docker-example-1.1.3.jar
+FROM nginx
+COPY --from=dist /app/dist/ /usr/share/nginx/html
+
 
 
 

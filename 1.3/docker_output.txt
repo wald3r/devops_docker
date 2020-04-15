@@ -1,4 +1,4 @@
-(base) walder@station:~/workspaces/devops_docker/1.3$ sudo docker run -i devopsdockeruh/pull_exercise
+(base) walder@station:~/workspaces/devops_docker/1.3$ sudo docker run -it devopsdockeruh/pull_exercise
 Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
 latest: Pulling from devopsdockeruh/pull_exercise
 8e402f1a9c57: Pull complete 

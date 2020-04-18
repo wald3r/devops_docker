@@ -1,0 +1,31 @@
+version: "3.3"
+
+services:
+
+  
+      backend:
+       depends_on: 
+         - redis
+       image: server_image:latest
+       networks:
+         - webnet
+       environment:
+         - PORT=3000
+       ports:
+         - 3000:3000
+       deploy:
+         replicas: 3
+         resources:
+           limits:
+             cpus: '.05'
+
+      redis:
+        image: redis_image:latest
+        networks:
+          - webnet
+   
+      
+
+networks:
+  webnet:
+

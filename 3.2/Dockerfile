@@ -1,8 +1,2 @@
-FROM taskinen/yle-dl
-
-
-WORKDIR /app
-
-
-
+from devopsdockeruh/heroku-example
 

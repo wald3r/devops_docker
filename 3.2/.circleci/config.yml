@@ -1,0 +1,12 @@
+version: 2
+jobs: 
+  build:
+   machine: true
+
+   steps: 
+     - checkout
+     - run: heroku update
+     - run: docker login --username=$HEROKU_LOGIN --password=$HEROKU_API_KEY registry.heroku.com
+     - run: heroku container:push web -a $HEROKU_APP_NAME
+     - run: heroku container:release web -a $HEROKU_APP_NAME
+
